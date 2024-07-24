@@ -1,117 +1,102 @@
-# list matlab simple array [] different data types bhi store ho skte h ismai 
-# lists are mutable unmai value change kaaro to value change hoti h and save hoti h 
+# List in Python (similar to array in MATLAB)
+# Lists can store different data types
+# Lists are mutable; values can be changed and saved
 
+# Creating a list with different data types
 matlab_array = [1, 2, 3, 4, 5, 'six', 7.0, True, [8, 9]]
 print(f'Original Matlab Array: {matlab_array}')
 
+# Modifying an element in the list
 matlab_array[5] = 100
-print(f'Original Matlab Array: {matlab_array}')
+print(f'Updated Matlab Array: {matlab_array}')
 
-x = [ 1, 2, 3, 4, 5]
-y = [ x ** 2 for x in x ]
+# List comprehension to create a new list
+x = [1, 2, 3, 4, 5]
+y = [num ** 2 for num in x]
 print(y)
 
-
+# Indexing and slicing in lists
 weekday = ['MON', 'TUE', 'WED', 'THU', 'FRI']
-            # 0     1     2       3      4
-            #-5    -4    -3      -2     -1           
-#forward indexing
-print(weekday[1]) 
+# Forward indexing
+print(weekday[1])  # Output: 'TUE'
 
-#backward indexing 
-print(weekday[-5])  
+# Backward indexing
+print(weekday[-5])  # Output: 'MON'
 
-# left side index include hota h right side wala index include nhi hota h 
-print(weekday[1:3])
-print(weekday[-5:-1],"\n")
+# Slicing
+print(weekday[1:3])  # Output: ['TUE', 'WED']
+print(weekday[-5:-1])  # Output: ['MON', 'TUE', 'WED', 'THU']
 
-print(weekday[1:])
-print(weekday[:-3],"\n")
-print(weekday[:])
+print(weekday[1:])  # Output: ['TUE', 'WED', 'THU', 'FRI']
+print(weekday[:-3])  # Output: ['MON', 'TUE']
+print(weekday[:])  # Output: ['MON', 'TUE', 'WED', 'THU', 'FRI']
 
-
-# to add new element 
-# append new element at last 
-# insert at specified index
+# Adding elements to the list
 days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
-# add this element in last of the list
-days.append('SUN')   
+days.append('SUN')  # Adds 'SUN' to the end of the list
 print(days)
 
 month = ['JAN', 'FEB', 'MAR', 'MAY']
-# add 'APR' at index=2 of the list
-month.insert(2,'APR') 
+month.insert(2, 'APR')  # Inserts 'APR' at index 2
 print(month)
 
-# remove() - deletes first occurrence of a specified element from the list.
-# pop() - deletes element at specified index or last element if index is not specified.
-# clear() - deletes all elements of a list.
-# del - deletes a element or range of elements or list itself.
-
+# Removing elements from the list
 number = [10, 50, 50, 100, 1000]
-#delete first occurrence of 50.
-number.remove(50)    
+number.remove(50)  # Removes the first occurrence of 50
 print(number)
 
 number = [10, 50, 50, 100, 1000]
-#delete element at index=3.
-number.pop(3)        
+number.pop(3)  # Removes the element at index 3
 print(number)
 
 number = [10, 50, 50, 100, 1000]
-#delete last element from the list.
-number.pop()        
+number.pop()  # Removes the last element
 print(number)
 
 number = [10, 50, 50, 100, 1000]
-#delete all elements from the list.
-number.clear()     
+number.clear()  # Clears the list
 print(number)
 
 number = [10, 50, 50, 100, 1000]
-#delete element at index=3.
-del number[3]       
+del number[3]  # Deletes the element at index 3
 print(number)
 
 number = [10, 50, 50, 100, 1000]
-#delete element at index=1,2 and 3.
-del number[1:4]     
+del number[1:4]  # Deletes elements from index 1 to 3
 print(number)
 
 number = [10, 50, 50, 100, 1000]
-#delete list 'number'.
-del number          
-# print(number) gives error
+del number  # Deletes the entire list
+# print(number) would give an error
 
+# Length of the list
 number = [10, 50, 50, 100, 1000, 1000]
 print(len(number))
 
+# Iterating over a list
 colors = ['Red', 'Blue', 'Green']
-for x in colors:
-    print(x)
-    
-colors = ['Red', 'Blue', 'Green']
+for color in colors:
+    print(color)
+
+# Checking for an element in a list
 if 'white' in colors:
-  print('Yes, white is an element of colors.')
+    print('Yes, white is an element of colors.')
 else:
-  print('No, white is not an element of colors.')   
-  
-# = operator: Creates a reference of the list. Any change in old list modifies new list also.
-# copy(): Creates an independent copy of a list.
-# list(): Creates an independent copy of a list.     
+    print('No, white is not an element of colors.')
 
+# Creating references and copies of a list
 colors = ['Red', 'Blue', 'Green']
-mycolor = colors
-yourcolor = colors.copy()
-hiscolor = list(colors)
+mycolor = colors  # Reference to the same list
+yourcolor = colors.copy()  # Independent copy of the list
+hiscolor = list(colors)  # Another independent copy of the list
 
 print(mycolor)     
 print(yourcolor)   
-print(hiscolor, "\n")    
+print(hiscolor)
 
-#delete last element in 'colors'
-colors.pop()       
+# Modifying the original list
+colors.pop()  # Deletes the last element
 
-print(mycolor)     
-print(yourcolor)   
-print(hiscolor)  
+print(mycolor)     # Reflects the change (same reference)
+print(yourcolor)   # Does not reflect the change (independent copy)
+print(hiscolor)    # Does not reflect the change (independent copy)
