@@ -100,3 +100,23 @@ colors.pop()  # Deletes the last element
 print(mycolor)     # Reflects the change (same reference)
 print(yourcolor)   # Does not reflect the change (independent copy)
 print(hiscolor)    # Does not reflect the change (independent copy)
+
+# + operator: Used to join two lists into a new list.
+# append(): Appends all elements of one list into another.
+# extend(): Adds all elements of one list into another.
+
+colors = ['Red', 'Blue', 'Green']
+numbers = [10, 20]
+mylist1 = colors + numbers
+print(mylist1)
+
+colors = ['Red', 'Blue', 'Green']
+numbers = [10, 20]
+for i in numbers:
+  colors.append(i)
+print(colors)
+
+colors = ['Red', 'Blue', 'Green']
+numbers = [10, 20]
+colors.extend(numbers)
+print(colors)
