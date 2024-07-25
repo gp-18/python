@@ -1,6 +1,7 @@
 # List in Python (similar to array in MATLAB)
 # Lists can store different data types
 # Lists are mutable; values can be changed and saved
+# syntax for this is []
 
 # Creating a list with different data types
 matlab_array = [1, 2, 3, 4, 5, 'six', 7.0, True, [8, 9]]

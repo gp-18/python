@@ -1,4 +1,9 @@
 # https://www.alphacodingskills.com/python/python-lists.php
+
+# [] = brackets 
+# {} = braces 
+# () = parantheses
+
 print("hello world")
 
 a = 1 
